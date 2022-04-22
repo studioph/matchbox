@@ -1,0 +1,18 @@
+{
+  "id": "2u",
+  "name": "Flatcar Linux",
+  "boot": {
+    "kernel": "http://truenas.studiop:9000/assets/flatcar_production_pxe.vmlinuz",
+    "initrd": [
+      "http://truenas.studiop:9000/assets/flatcar_production_pxe_image.cpio.gz"
+    ],
+    "args": [
+      "initrd=flatcar_production_pxe_image.cpio.gz",
+      "flatcar.config.url=https://raw.githubusercontent.com/paulhutchings/flatcar/main/2u/ignition.json",
+      "flatcar.first_boot=yes",
+      "console=tty0",
+      "console=ttyS0,115200n8",
+      "ipv6.disable=1"
+    ]
+  }
+}

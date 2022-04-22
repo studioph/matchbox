@@ -1,0 +1,10 @@
+services:
+    matchbox:
+        container_name: matchbox
+        command: -address=0.0.0.0:8080 -assets-path '' -log-level=debug
+        image: quay.io/poseidon/matchbox:v0.9.0-87-g608bc4b-amd64
+        ports:
+          - 8080:8080 
+          - 8081:8081
+        volumes:
+          - ${PWD}/data:/var/lib/matchbox:ro
